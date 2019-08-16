@@ -235,6 +235,9 @@
                                  .shine
 ============================================================================= */
 
+.shine {
+  overflow: hidden;
+}
 
 .shine::after {
   position: absolute;
