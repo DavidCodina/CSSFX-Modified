@@ -1,0 +1,1173 @@
+/* =============================================================================
+                            CSSFX Modified
+============================================================================= */
+
+
+.demo-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin: 0 0 25px 0;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #333;
+  border: 1px solid black;
+  border-radius: 15px;
+  transition: color 0.2s linear;
+  z-index: 1;
+}
+
+.square:hover {
+  cursor: pointer;
+  color: white; /* Change color property if needed. */
+}
+
+
+/* =============================================================================
+                                .bubble-*-*
+============================================================================= */
+
+
+/* =========================
+    .bubble-top-left
+========================= */
+
+
+.bubble-top-left {
+  color: #3cefff;
+  overflow: hidden;
+}
+
+.bubble-top-left::before {
+  position: absolute;
+  top: 0%;
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.2s linear;
+  border-radius: 50%;
+  z-index: -1;
+}
+.bubble-top-left:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
+}
+
+
+/* =========================
+    .bubble-top-right
+========================= */
+
+
+.bubble-top-right {
+  color: #3cefff;
+  overflow: hidden;
+}
+
+.bubble-top-right::before {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.2s linear;
+  border-radius: 50%;
+  z-index: -1;
+}
+.bubble-top-right:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
+}
+
+
+/* =========================
+    .bubble-bottom-right
+========================= */
+
+
+.bubble-bottom-right {
+  color: #3cefff;
+  overflow: hidden;
+}
+
+.bubble-bottom-right::before {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.2s linear;
+  border-radius: 50%;
+  z-index: -1;
+}
+.bubble-bottom-right:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
+}
+
+
+/* =========================
+   .bubble-bottom-left
+========================= */
+
+
+.bubble-bottom-left {
+  color: #3cefff;
+  overflow: hidden;
+}
+
+.bubble-bottom-left::before {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: #3cefff; /* Whatever you want */
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.2s linear;
+  border-radius: 50%;
+  z-index: -1;
+}
+.bubble-bottom-left:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
+}
+
+
+/* =========================
+      .bubble-center
+========================= */
+
+
+.bubble-center {
+  color: #3cefff;
+  overflow: hidden;
+}
+
+.bubble-center::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: #3cefff; /* Whatever you want */
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.2s linear;
+  border-radius: 50%;
+  z-index: -1;
+}
+.bubble-center:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(1.5, 1.5, 1.5);
+}
+
+
+/* =============================================================================
+                                  .jelly
+============================================================================= */
+
+
+.jelly:hover {
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%, 100% { transform: scale(1, 1);       }
+  25%      { transform: scale(0.9, 1.1);   }
+  50%      { transform: scale(1.1, 0.9);   }
+  75%      { transform: scale(0.95, 1.05); }
+}
+
+
+/* =============================================================================
+                                 .pulse
+============================================================================= */
+
+
+.pulse::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  /* The border color is the same as the background-color set on original element.
+  Modify the width as needed. */
+  border: 30px solid #333;
+  transform-origin: center;
+  transform: scale(1);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.pulse:hover::before {
+  transition: all 0.5s linear;  /* Change as needed. */
+  transform-origin: center;
+  transform: scale(1.25);       /* Change as needed. */
+  opacity: 0;
+}
+
+
+/* =============================================================================
+                                 .shine
+============================================================================= */
+
+
+.shine::after {
+  position: absolute;
+  top:    -50%;
+  bottom: -50%;
+  width: 24px;   /* Change as needed. */
+  content: '';
+  background-color: hsla(0, 0%, 100%, 0.2);
+  transform: translate3d(-900%, 0, 0) rotate(35deg); /* Change as needed. */
+  z-index: -1;
+}
+
+.shine:hover::after {
+  transition: transform 0.35s linear;
+  transform: translate3d(450%, 0, 0) rotate(35deg); /* Change as needed. */
+}
+
+
+/* =============================================================================
+                                   .slide-*
+============================================================================= */
+
+
+/* =========================
+      .slide-down
+========================= */
+
+
+.slide-down {
+  overflow: hidden;
+}
+
+.slide-down::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #fc2f70;
+  transform-origin: center bottom;
+  transform: scaleY(0);
+  transition: transform 0.25s linear;
+  z-index: -1;
+}
+
+.slide-down:hover::before {
+  transform-origin: center top;
+  transform: scaleY(1);
+}
+
+
+/* =========================
+      .slide-right
+========================= */
+
+
+.slide-right {
+  overflow: hidden;
+}
+
+.slide-right::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #fc2f70;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.25s linear;
+  z-index: -1;
+}
+
+.slide-right:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+
+
+/* =========================
+      .slide-up
+========================= */
+
+
+.slide-up {
+  overflow: hidden;
+}
+
+.slide-up::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #fc2f70;
+  transform-origin: center top;
+  transform: scaleY(0);
+  transition: transform 0.25s linear;
+  z-index: -1;
+}
+
+.slide-up:hover::before {
+  transform-origin: center bottom;
+  transform: scaleY(1);
+}
+
+
+/* =========================
+      .slide-left
+========================= */
+
+
+.slide-left {
+  overflow: hidden;
+}
+
+
+.slide-left::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #fc2f70;
+  transform-origin: center left;
+  transform: scaleX(0);
+  transition: transform 0.25s linear;
+  z-index: -1;
+}
+
+.slide-left:hover::before {
+  transform-origin: center right;
+  transform: scaleX(1);
+}
+
+
+/* =============================================================================
+                           Outline from sides
+============================================================================= */
+
+
+/* HTML:
+<div class="outline-from-sides-container">
+  <div class="square outline-element">I'm text!</div>
+  <span class="bottom"></span>
+  <span class="right"></span>
+  <span class="top"></span>
+  <span class="left"></span>
+</div>
+*/
+
+.outline-from-sides-container {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+.outline-from-sides-container .outline-element {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  border: 3px solid transparent; /* Change width as needed. */
+  border-radius: 0;
+  transition: background-color 0.25s linear;
+}
+
+.outline-from-sides-container .outline-element:hover {
+  background-color: #282c34;
+}
+
+.outline-from-sides-container span {
+  position: absolute;
+  background-color: #fc2f70;
+  transition: transform 0.25s linear;
+  z-index: 1;
+}
+
+.outline-from-sides-container .bottom,
+.outline-from-sides-container .top {
+  height: 3px; /* Change as needed. */
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.outline-from-sides-container .left,
+.outline-from-sides-container .right {
+  width: 3px; /* Change as needed. */
+  top: 0;
+  bottom: 0;
+  transform: scaleY(0);
+}
+
+.outline-from-sides-container .bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+.outline-from-sides-container .outline-element:hover ~ .bottom {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.outline-from-sides-container .right {
+  right: 0;
+  transform-origin: top right;
+}
+
+.outline-from-sides-container .outline-element:hover ~ .right {
+  transform-origin: bottom right;
+  transform: scaleY(1);
+}
+
+.outline-from-sides-container .top {
+  top: 0;
+  transform-origin: top left;
+}
+
+.outline-from-sides-container .outline-element:hover ~ .top {
+  transform-origin: top right;
+  transform: scaleX(1);
+}
+
+.outline-from-sides-container .left {
+  left: 0;
+  transform-origin: bottom left;
+}
+
+.outline-from-sides-container .outline-element:hover ~ .left {
+  transform-origin: top left;
+  transform: scaleY(1);
+}
+
+
+/* =============================================================================
+                           Outline from center
+============================================================================= */
+
+
+/* HTML:
+<div class="outline-from-center-container">
+  <div class="square outline-element">I'm text!</div>
+  <span class="bottom"></span>
+  <span class="right"></span>
+  <span class="top"></span>
+  <span class="left"></span>
+</div>
+*/
+
+
+.outline-from-center-container {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+.outline-from-center-container .outline-element  {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  border: 3px solid transparent; /* Change width as needed. */
+  border-radius: 0;
+  transition: background-color 0.25s linear;
+}
+
+.outline-from-center-container .outline-element:hover {
+  background-color: #282c34;
+}
+
+.outline-from-center-container span {
+  position: absolute;
+  background-color: #fc2f70;
+  transform-origin: center;
+  transition: transform 0.25s linear;
+  z-index: 1;
+}
+
+.outline-from-center-container .bottom,
+.outline-from-center-container .top {
+  height: 3px; /* Change as needed. */
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.outline-from-center-container .left,
+.outline-from-center-container .right {
+  width: 3px; /* Change as needed. */
+  top: 0;
+  bottom: 0;
+  transform: scaleY(0);
+}
+
+.outline-from-center-container .top {
+  top: 0;
+}
+
+.outline-from-center-container .bottom {
+  bottom: 0;
+}
+
+.outline-from-center-container .left {
+  left: 0;
+}
+
+.outline-from-center-container .right {
+  right: 0;
+}
+
+.outline-from-center-container .outline-element:hover ~ .top,
+.outline-from-center-container .outline-element:hover ~ .bottom {
+  transform: scaleX(1);
+}
+
+.outline-from-center-container .outline-element:hover ~ .left,
+.outline-from-center-container .outline-element:hover ~ .right {
+  transform: scaleY(1);
+}
+
+
+/* =============================================================================
+                                     Outline Trace
+============================================================================= */
+
+
+/* HTML:
+<div class="outline-trace-container">
+  <div class="square outline-element">I'm text!</div>
+  <span class="bottom"></span>
+  <span class="right"></span>
+  <span class="top"></span>
+  <span class="left"></span>
+</div>
+*/
+
+.outline-trace-container  {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+.outline-trace-container .outline-element {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  border: 3px solid transparent; /* Change width as needed. */
+  border-radius: 0;
+  transition: background-color 0.25s linear;
+}
+
+.outline-trace-container .outline-element:hover {
+  background-color: #282c34;
+}
+
+.outline-trace-container span {
+  position: absolute;
+  background-color: #fc2f70;
+  transition: transform 0.15s linear; /* Change as needed. */
+  z-index: 1;
+}
+
+.outline-trace-container .bottom,
+.outline-trace-container .top {
+  height: 3px; /* Change as needed. */
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.outline-trace-container .left,
+.outline-trace-container .right {
+  width: 3px; /* Change as needed. */
+  top: 0;
+  bottom: 0;
+  transform: scaleY(0);
+}
+
+.outline-trace-container .bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+.outline-trace-container .outline-element:hover ~ .bottom {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.outline-trace-container .right {
+  right: 0;
+  transform-origin: top right;
+  transition-delay: 0.15s; /* Change as needed. */
+}
+
+.outline-trace-container .outline-element:hover ~ .right {
+  transform-origin: bottom right;
+  transform: scaleY(1);
+}
+
+.outline-trace-container .top {
+  top: 0;
+  transform-origin: top left;
+  transition-delay: 0.3s; /* Change as needed. */
+}
+
+.outline-trace-container .outline-element:hover ~ .top {
+  transform-origin: top right;
+  transform: scaleX(1);
+}
+
+.outline-trace-container .left {
+  left: 0;
+  transform-origin: bottom left;
+  transition-delay: 0.45s; /* Change as needed. */
+}
+
+.outline-trace-container .outline-element:hover ~ .left {
+  transform-origin: top left;
+  transform: scaleY(1);
+}
+
+
+/* =============================================================================
+                                .bars-from-*
+============================================================================= */
+
+
+/* =========================
+    .bars-from-sides
+========================= */
+
+
+.bars-from-sides {
+  position: relative;
+}
+
+.bars-from-sides:hover {
+  cursor:pointer;
+}
+
+.bars-from-sides::before,
+.bars-from-sides::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #3cefff;
+  transform: scaleX(0);
+  transition: transform 0.15s linear;
+}
+
+.bars-from-sides::before {
+  top: -3px; /* Change as needed. */
+  transform-origin: center right;
+}
+
+.bars-from-sides:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+
+.bars-from-sides::after {
+  bottom: -3px; /* Change as needed. */
+  transform-origin: center left;
+}
+
+.bars-from-sides:hover::after {
+  transform-origin: center right;
+  transform: scaleX(1);
+}
+
+
+/* =========================
+    .bars-from-center
+========================= */
+
+
+.bars-from-center {
+  position: relative;
+}
+
+.bars-from-center:hover {
+  cursor:pointer;
+}
+
+.bars-from-center::before,
+.bars-from-center::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.15s linear;
+}
+
+.bars-from-center::before {
+  top: -3px;
+}
+
+.bars-from-center::after {
+  bottom: -3px;
+}
+
+.bars-from-center:hover::before,
+.bars-from-center:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+/* =============================================================================
+                                .highlight-from-*
+============================================================================= */
+
+
+
+/* =========================
+  .highlight-from-left
+========================= */
+
+
+.highlight-from-left {
+  position: relative;
+  transition: color 0.25s linear;
+  z-index: 1;
+}
+
+.highlight-from-left:hover {
+  cursor:pointer;
+}
+
+.highlight-from-left:hover {
+  color: white; /* Change as needed. */
+}
+
+.highlight-from-left::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  content: '';
+  background-color: violet; /* Change as needed. */
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.15s linear;
+  z-index: -1;
+}
+
+.highlight-from-left:hover::before {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+
+
+/* =========================
+  .highlight-from-bottom
+========================= */
+
+
+.highlight-from-bottom {
+  position: relative;
+  transition: color 0.25s linear;
+  z-index: 1;
+}
+
+.highlight-from-bottom:hover {
+  cursor:pointer;
+}
+
+.highlight-from-bottom:hover {
+  color: white; /* Change as needed. */
+}
+
+.highlight-from-bottom::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  content: '';
+  background-color: violet; /* Change as needed. */
+  transform-origin: bottom center;
+  transform: scaleY(0);
+  transition: all 0.15s linear;
+  z-index: -1;
+}
+
+.highlight-from-bottom:hover::before {
+  transform: scaleY(1);
+}
+
+
+/* =============================================================================
+                                    Overline
+============================================================================= */
+
+
+/* =========================
+  .overline-from-left
+========================= */
+
+
+.overline-from-left {
+  position: relative;
+}
+
+
+.overline-from-left:hover {
+  cursor:pointer;
+}
+
+.overline-from-left::before {
+  position: absolute;
+  top: -3px; /* Change as needed */
+  left: 0;
+  right: 0;
+  height: 3px;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.15s linear;
+}
+
+.overline-from-left:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+
+/* =========================
+  .underline-from-center
+========================= */
+
+
+.overline-from-center {
+  position: relative;
+}
+
+.overline-from-center:hover {
+  cursor:pointer;
+}
+
+.overline-from-center::before {
+  position: absolute;
+  left: 50%;
+  top: -3px; /* Change as needed */
+  height: 3px;
+  width: 100%;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate(-50%, 0) scaleX(0);
+  transition: transform 0.15s linear;
+}
+
+.overline-from-center:hover::before {
+  transform: translate(-50%, 0) scaleX(1);
+}
+
+
+/* =============================================================================
+                               .pillars-from-*
+============================================================================= */
+
+
+
+/* =========================
+  .pillars-from-bottom
+========================= */
+
+
+.pillars-from-bottom {
+  position: relative;
+}
+
+.pillars-from-bottom:hover {
+  cursor:pointer;
+}
+
+.pillars-from-bottom::before,
+.pillars-from-bottom::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: center top;
+  transform: scaleY(0);
+  transition: transform 0.15s linear;
+}
+
+.pillars-from-bottom::before {
+  left: -8px;
+}
+
+.pillars-from-bottom::after {
+  right: -8px;
+}
+
+.pillars-from-bottom:hover::before,
+.pillars-from-bottom:hover::after {
+  transform-origin: center bottom;
+  transform: scaleY(1);
+}
+
+
+/* =========================
+  .pillars-from-bottom-top
+========================= */
+
+
+.pillars-from-bottom-top {
+  position: relative;
+}
+
+.pillars-from-bottom-top:hover {
+  cursor:pointer;
+}
+
+.pillars-from-bottom-top::before,
+.pillars-from-bottom-top::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  content: '';
+  background-color: #3cefff;
+  transform: scaleY(0);
+  transition: transform 0.15s linear;
+}
+
+.pillars-from-bottom-top::before {
+  left: -8px;
+  transform-origin: center top;
+}
+
+.pillars-from-bottom-top:hover::before {
+  transform-origin: center bottom;
+  transform: scaleY(1);
+}
+
+.pillars-from-bottom-top::after {
+  right: -8px;
+  transform-origin: center bottom;
+}
+
+.pillars-from-bottom-top:hover::after {
+  transform-origin: center top;
+  transform: scaleY(1);
+}
+
+
+/* =========================
+  .pillars-from-center
+========================= */
+
+
+.pillars-from-center {
+  position: relative;
+}
+
+.pillars-from-center:hover {
+  cursor:pointer;
+}
+
+.pillars-from-center::before,
+.pillars-from-center::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: scaleY(0);
+  transition: transform 0.15s linear;
+}
+
+.pillars-from-center::before {
+  left: -8px;
+}
+
+.pillars-from-center::after {
+  right: -8px;
+}
+
+.pillars-from-center:hover::before, span:hover::after {
+  transform: scaleY(1);
+}
+
+
+/* =============================================================================
+                                      Strikethrough
+============================================================================= */
+
+
+.strikethrough {
+  position: relative;
+}
+
+.strikethrough:hover {
+  cursor:pointer;
+}
+
+.strikethrough::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  content: '';
+  background-color: #fc2f70;
+  transform-origin: center right;
+  transform: scaleX(0) translateY(-50%);
+  transition: transform 0.15s linear;
+}
+
+.strikethrough:hover {
+  /*Change color property if desired. */
+}
+
+.strikethrough:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1) translateY(-50%);
+}
+
+
+/* =============================================================================
+                    .underline-from-*  &  .reverse-underline
+============================================================================= */
+
+
+/* =========================
+  .underline-from-left
+========================= */
+
+
+.underline-from-left {
+  position: relative;
+}
+
+
+.underline-from-left:hover {
+  cursor:pointer;
+}
+
+
+.underline-from-left::before {
+  position: absolute;
+  bottom: -3px; /* Change as needed */
+  left: 0;
+  right: 0;
+  height: 3px;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.15s linear;
+}
+
+.underline-from-left:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+
+/* =========================
+  .underline-from-center
+========================= */
+
+
+.underline-from-center {
+  position: relative;
+}
+
+.underline-from-center:hover {
+  cursor:pointer;
+}
+
+.underline-from-center::before {
+  position: absolute;
+  left: 50%;
+  bottom: -3px; /* Change as needed */
+  height: 3px;
+  width: 100%;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate(-50%, 0) scaleX(0);
+  transition: transform 0.15s linear;
+}
+
+.underline-from-center:hover::before {
+  transform: translate(-50%, 0) scaleX(1);
+}
+
+
+/* =========================
+    .reverse-underline
+========================= */
+
+
+.reverse-underline {
+  position: relative;
+}
+
+.reverse-underline:hover {
+  cursor:pointer;
+}
+
+.reverse-underline::before {
+  position: absolute;
+  height: 3px;
+  bottom: -3px; /* Change as needed */
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #3cefff;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.25s linear;
+}
+
+.reverse-underline:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
