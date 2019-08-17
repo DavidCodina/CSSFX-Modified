@@ -30,7 +30,6 @@
 }
 
 .square:hover {
-  cursor: pointer;
   color: white; /* Change color property if needed. */
 }
 
@@ -47,6 +46,7 @@
 
 .bubble-top-left {
   color: #3cefff;
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -64,6 +64,7 @@
   border-radius: 50%;
   z-index: -1;
 }
+
 .bubble-top-left:hover::before {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
@@ -76,6 +77,7 @@
 
 .bubble-top-right {
   color: #3cefff;
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -93,6 +95,7 @@
   border-radius: 50%;
   z-index: -1;
 }
+
 .bubble-top-right:hover::before {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
@@ -105,6 +108,7 @@
 
 .bubble-bottom-right {
   color: #3cefff;
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -122,6 +126,7 @@
   border-radius: 50%;
   z-index: -1;
 }
+
 .bubble-bottom-right:hover::before {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
@@ -134,6 +139,7 @@
 
 .bubble-bottom-left {
   color: #3cefff;
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -151,6 +157,7 @@
   border-radius: 50%;
   z-index: -1;
 }
+
 .bubble-bottom-left:hover::before {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
@@ -163,6 +170,7 @@
 
 .bubble-center {
   color: #3cefff;
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -180,6 +188,7 @@
   border-radius: 50%;
   z-index: -1;
 }
+
 .bubble-center:hover::before {
   transform: translate3d(-50%, -50%, 0) scale3d(1.5, 1.5, 1.5);
 }
@@ -189,6 +198,9 @@
                                   .jelly
 ============================================================================= */
 
+.jelly {
+  cursor: pointer;
+}
 
 .jelly:hover {
   animation: jelly 0.5s;
@@ -206,6 +218,10 @@
                                  .pulse
 ============================================================================= */
 
+
+.pulse {
+  cursor: pointer;
+}
 
 
 .pulse::before {
@@ -238,6 +254,7 @@
 
 
 .shine {
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -269,6 +286,7 @@
 
 
 .slide-down {
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -298,6 +316,7 @@
 
 
 .slide-right {
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -327,6 +346,7 @@
 
 
 .slide-up {
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -356,6 +376,7 @@
 
 
 .slide-left {
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -399,6 +420,7 @@
   position: relative;
   height: 150px;
   width: 150px;
+  cursor: pointer;
 }
 
 .outline-from-sides-container .outline-element {
@@ -498,6 +520,7 @@
   position: relative;
   height: 150px;
   width: 150px;
+  cursor: pointer;
 }
 
 .outline-from-center-container .outline-element  {
@@ -583,6 +606,7 @@
   position: relative;
   height: 150px;
   width: 150px;
+  cursor: pointer;
 }
 
 .outline-trace-container .outline-element {
@@ -677,9 +701,6 @@
 
 .bars-from-sides {
   position: relative;
-}
-
-.bars-from-sides:hover {
   cursor:pointer;
 }
 
@@ -723,9 +744,6 @@
 
 .bars-from-center {
   position: relative;
-}
-
-.bars-from-center:hover {
   cursor:pointer;
 }
 
@@ -770,12 +788,12 @@
 .highlight-from-left {
   position: relative;
   transition: color 0.25s linear;
+  cursor:pointer;
   z-index: 1;
 }
 
 .highlight-from-left:hover {
   color: white; /* Change as needed. */
-    cursor:pointer;
 }
 
 .highlight-from-left::before {
@@ -805,13 +823,13 @@
 
 .highlight-from-bottom {
   position: relative;
+  cursor:pointer;
   transition: color 0.25s linear;
   z-index: 1;
 }
 
 .highlight-from-bottom:hover {
   color: white; /* Change as needed. */
-  cursor:pointer;
 }
 
 .highlight-from-bottom::before {
@@ -845,10 +863,6 @@
 
 .overline-from-left {
   position: relative;
-}
-
-
-.overline-from-left:hover {
   cursor:pointer;
 }
 
@@ -878,9 +892,6 @@
 
 .overline-from-center {
   position: relative;
-}
-
-.overline-from-center:hover {
   cursor:pointer;
 }
 
@@ -915,9 +926,6 @@
 
 .pillars-from-bottom {
   position: relative;
-}
-
-.pillars-from-bottom:hover {
   cursor:pointer;
 }
 
@@ -956,9 +964,6 @@
 
 .pillars-from-bottom-top {
   position: relative;
-}
-
-.pillars-from-bottom-top:hover {
   cursor:pointer;
 }
 
@@ -1002,9 +1007,6 @@
 
 .pillars-from-center {
   position: relative;
-}
-
-.pillars-from-center:hover {
   cursor:pointer;
 }
 
@@ -1029,7 +1031,8 @@
   right: -8px;
 }
 
-.pillars-from-center:hover::before, span:hover::after {
+.pillars-from-center:hover::before,
+.pillars-from-center:hover::after {
   transform: scaleY(1);
 }
 
@@ -1041,9 +1044,6 @@
 
 .strikethrough {
   position: relative;
-}
-
-.strikethrough:hover {
   cursor:pointer;
 }
 
@@ -1082,13 +1082,8 @@
 
 .underline-from-left {
   position: relative;
-}
-
-
-.underline-from-left:hover {
   cursor:pointer;
 }
-
 
 .underline-from-left::before {
   position: absolute;
@@ -1116,9 +1111,6 @@
 
 .underline-from-center {
   position: relative;
-}
-
-.underline-from-center:hover {
   cursor:pointer;
 }
 
@@ -1147,9 +1139,6 @@
 
 .reverse-underline {
   position: relative;
-}
-
-.reverse-underline:hover {
   cursor:pointer;
 }
 
