@@ -29,7 +29,8 @@
   z-index: 1;
 }
 
-.square:hover {
+.square:hover,
+.square:active {
   cursor: pointer;
   color: white; /* Change color property if needed. */
 }
@@ -64,7 +65,9 @@
   border-radius: 50%;
   z-index: -1;
 }
-.bubble-top-left:hover::before {
+
+.bubble-top-left:hover::before,
+.bubble-top-left:active::before {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
 
@@ -93,7 +96,8 @@
   border-radius: 50%;
   z-index: -1;
 }
-.bubble-top-right:hover::before {
+.bubble-top-right:hover::before,
+.bubble-top-right:active::before {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
 
@@ -122,7 +126,8 @@
   border-radius: 50%;
   z-index: -1;
 }
-.bubble-bottom-right:hover::before {
+.bubble-bottom-right:hover::before,
+.bubble-bottom-right:active::before  {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
 
@@ -151,7 +156,8 @@
   border-radius: 50%;
   z-index: -1;
 }
-.bubble-bottom-left:hover::before {
+.bubble-bottom-left:hover::before,
+.bubble-bottom-left:active::before {
   transform: translate3d(50%, -50%, 0) scale3d(3, 3, 3);
 }
 
@@ -180,7 +186,8 @@
   border-radius: 50%;
   z-index: -1;
 }
-.bubble-center:hover::before {
+.bubble-center:hover::before,
+.bubble-center:active::before {
   transform: translate3d(-50%, -50%, 0) scale3d(1.5, 1.5, 1.5);
 }
 
@@ -190,7 +197,8 @@
 ============================================================================= */
 
 
-.jelly:hover {
+.jelly:hover,
+.jelly:active {
   animation: jelly 0.5s;
 }
 
@@ -205,6 +213,7 @@
 /* =============================================================================
                                  .pulse
 ============================================================================= */
+
 
 
 .pulse::before {
@@ -223,7 +232,8 @@
   z-index: -1;
 }
 
-.pulse:hover::before {
+.pulse:hover::before,
+.pulse:active::before {
   transition: all 0.5s linear;  /* Change as needed. */
   transform-origin: center;
   transform: scale(1.25);       /* Change as needed. */
@@ -234,6 +244,7 @@
 /* =============================================================================
                                  .shine
 ============================================================================= */
+
 
 .shine {
   overflow: hidden;
@@ -250,7 +261,8 @@
   z-index: -1;
 }
 
-.shine:hover::after {
+.shine:hover::after,
+.shine:active::after {
   transition: transform 0.35s linear;
   transform: translate3d(450%, 0, 0) rotate(35deg); /* Change as needed. */
 }
@@ -284,7 +296,8 @@
   z-index: -1;
 }
 
-.slide-down:hover::before {
+.slide-down:hover::before,
+.slide-down:active::before {
   transform-origin: center top;
   transform: scaleY(1);
 }
@@ -313,7 +326,8 @@
   z-index: -1;
 }
 
-.slide-right:hover::before {
+.slide-right:hover::before,
+.slide-right:active::before {
   transform-origin: center left;
   transform: scaleX(1);
 }
@@ -342,7 +356,8 @@
   z-index: -1;
 }
 
-.slide-up:hover::before {
+.slide-up:hover::before,
+.slide-up:active::before  {
   transform-origin: center bottom;
   transform: scaleY(1);
 }
@@ -372,7 +387,8 @@
   z-index: -1;
 }
 
-.slide-left:hover::before {
+.slide-left:hover::before,
+.slide-left:active::before {
   transform-origin: center right;
   transform: scaleX(1);
 }
@@ -408,7 +424,8 @@
   transition: background-color 0.25s linear;
 }
 
-.outline-from-sides-container .outline-element:hover {
+.outline-from-sides-container .outline-element:hover,
+.outline-from-sides-container .outline-element:active {
   background-color: #282c34;
 }
 
@@ -440,7 +457,8 @@
   transform-origin: bottom right;
 }
 
-.outline-from-sides-container .outline-element:hover ~ .bottom {
+.outline-from-sides-container .outline-element:hover ~ .bottom,
+.outline-from-sides-container .outline-element:active ~ .bottom {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -450,7 +468,8 @@
   transform-origin: top right;
 }
 
-.outline-from-sides-container .outline-element:hover ~ .right {
+.outline-from-sides-container .outline-element:hover ~ .right,
+.outline-from-sides-container .outline-element:active ~ .right {
   transform-origin: bottom right;
   transform: scaleY(1);
 }
@@ -460,7 +479,8 @@
   transform-origin: top left;
 }
 
-.outline-from-sides-container .outline-element:hover ~ .top {
+.outline-from-sides-container .outline-element:hover ~ .top,
+.outline-from-sides-container .outline-element:active ~ .top {
   transform-origin: top right;
   transform: scaleX(1);
 }
@@ -470,7 +490,8 @@
   transform-origin: bottom left;
 }
 
-.outline-from-sides-container .outline-element:hover ~ .left {
+.outline-from-sides-container .outline-element:hover ~ .left,
+.outline-from-sides-container .outline-element:active ~ .left {
   transform-origin: top left;
   transform: scaleY(1);
 }
@@ -507,7 +528,8 @@
   transition: background-color 0.25s linear;
 }
 
-.outline-from-center-container .outline-element:hover {
+.outline-from-center-container .outline-element:hover,
+.outline-from-center-container .outline-element:active {
   background-color: #282c34;
 }
 
@@ -552,12 +574,16 @@
 }
 
 .outline-from-center-container .outline-element:hover ~ .top,
-.outline-from-center-container .outline-element:hover ~ .bottom {
+.outline-from-center-container .outline-element:hover ~ .bottom,
+.outline-from-center-container .outline-element:active ~ .top,
+.outline-from-center-container .outline-element:active ~ .bottom  {
   transform: scaleX(1);
 }
 
 .outline-from-center-container .outline-element:hover ~ .left,
-.outline-from-center-container .outline-element:hover ~ .right {
+.outline-from-center-container .outline-element:hover ~ .right,
+.outline-from-center-container .outline-element:active ~ .left,
+.outline-from-center-container .outline-element:active ~ .right {
   transform: scaleY(1);
 }
 
@@ -592,7 +618,8 @@
   transition: background-color 0.25s linear;
 }
 
-.outline-trace-container .outline-element:hover {
+.outline-trace-container .outline-element:hover,
+.outline-trace-container .outline-element:active {
   background-color: #282c34;
 }
 
@@ -624,7 +651,8 @@
   transform-origin: bottom right;
 }
 
-.outline-trace-container .outline-element:hover ~ .bottom {
+.outline-trace-container .outline-element:hover ~ .bottom,
+.outline-trace-container .outline-element:active ~ .bottom {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -635,7 +663,8 @@
   transition-delay: 0.15s; /* Change as needed. */
 }
 
-.outline-trace-container .outline-element:hover ~ .right {
+.outline-trace-container .outline-element:hover ~ .right,
+.outline-trace-container .outline-element:active ~ .right {
   transform-origin: bottom right;
   transform: scaleY(1);
 }
@@ -646,7 +675,8 @@
   transition-delay: 0.3s; /* Change as needed. */
 }
 
-.outline-trace-container .outline-element:hover ~ .top {
+.outline-trace-container .outline-element:hover ~ .top,
+.outline-trace-container .outline-element:active ~ .top {
   transform-origin: top right;
   transform: scaleX(1);
 }
@@ -657,7 +687,8 @@
   transition-delay: 0.45s; /* Change as needed. */
 }
 
-.outline-trace-container .outline-element:hover ~ .left {
+.outline-trace-container .outline-element:hover ~ .left,
+.outline-trace-container .outline-element:active ~ .left  {
   transform-origin: top left;
   transform: scaleY(1);
 }
@@ -677,7 +708,8 @@
   position: relative;
 }
 
-.bars-from-sides:hover {
+.bars-from-sides:hover,
+.bars-from-sides:active  {
   cursor:pointer;
 }
 
@@ -698,7 +730,8 @@
   transform-origin: center right;
 }
 
-.bars-from-sides:hover::before {
+.bars-from-sides:hover::before,
+.bars-from-sides:active::before {
   transform-origin: center left;
   transform: scaleX(1);
 }
@@ -708,7 +741,8 @@
   transform-origin: center left;
 }
 
-.bars-from-sides:hover::after {
+.bars-from-sides:hover::after,
+.bars-from-sides:active::after {
   transform-origin: center right;
   transform: scaleX(1);
 }
@@ -723,7 +757,8 @@
   position: relative;
 }
 
-.bars-from-center:hover {
+.bars-from-center:hover,
+.bars-from-center:active {
   cursor:pointer;
 }
 
@@ -749,7 +784,9 @@
 }
 
 .bars-from-center:hover::before,
-.bars-from-center:hover::after {
+.bars-from-center:hover::after,
+.bars-from-center:active::before,
+.bars-from-center:active::after {
   transform: translateX(-50%) scaleX(1);
 }
 
@@ -771,12 +808,10 @@
   z-index: 1;
 }
 
-.highlight-from-left:hover {
-  cursor:pointer;
-}
-
-.highlight-from-left:hover {
+.highlight-from-left:hover,
+.highlight-from-left:active {
   color: white; /* Change as needed. */
+  cursor:pointer;
 }
 
 .highlight-from-left::before {
@@ -793,7 +828,8 @@
   z-index: -1;
 }
 
-.highlight-from-left:hover::before {
+.highlight-from-left:hover::before,
+.highlight-from-left:active::before {
   transform: scaleX(1);
   transform-origin: center left;
 }
@@ -810,12 +846,10 @@
   z-index: 1;
 }
 
-.highlight-from-bottom:hover {
-  cursor:pointer;
-}
-
-.highlight-from-bottom:hover {
+.highlight-from-bottom:hover,
+.highlight-from-bottom:active {
   color: white; /* Change as needed. */
+  cursor:pointer;
 }
 
 .highlight-from-bottom::before {
@@ -832,7 +866,8 @@
   z-index: -1;
 }
 
-.highlight-from-bottom:hover::before {
+.highlight-from-bottom:hover::before,
+.highlight-from-bottom:active::before {
   transform: scaleY(1);
 }
 
@@ -852,7 +887,8 @@
 }
 
 
-.overline-from-left:hover {
+.overline-from-left:hover,
+.overline-from-left:active {
   cursor:pointer;
 }
 
@@ -869,7 +905,8 @@
   transition: transform 0.15s linear;
 }
 
-.overline-from-left:hover::before {
+.overline-from-left:hover::before,
+.overline-from-left:active::before  {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -884,7 +921,8 @@
   position: relative;
 }
 
-.overline-from-center:hover {
+.overline-from-center:hover,
+.overline-from-center:active {
   cursor:pointer;
 }
 
@@ -901,7 +939,8 @@
   transition: transform 0.15s linear;
 }
 
-.overline-from-center:hover::before {
+.overline-from-center:hover::before,
+.overline-from-center:active::before {
   transform: translate(-50%, 0) scaleX(1);
 }
 
@@ -921,7 +960,8 @@
   position: relative;
 }
 
-.pillars-from-bottom:hover {
+.pillars-from-bottom:hover,
+.pillars-from-bottom:active  {
   cursor:pointer;
 }
 
@@ -947,7 +987,9 @@
 }
 
 .pillars-from-bottom:hover::before,
-.pillars-from-bottom:hover::after {
+.pillars-from-bottom:hover::after,
+.pillars-from-bottom:active::before,
+.pillars-from-bottom:active::after {
   transform-origin: center bottom;
   transform: scaleY(1);
 }
@@ -962,7 +1004,8 @@
   position: relative;
 }
 
-.pillars-from-bottom-top:hover {
+.pillars-from-bottom-top:hover,
+.pillars-from-bottom-top:active {
   cursor:pointer;
 }
 
@@ -983,7 +1026,8 @@
   transform-origin: center top;
 }
 
-.pillars-from-bottom-top:hover::before {
+.pillars-from-bottom-top:hover::before,
+.pillars-from-bottom-top:active::before {
   transform-origin: center bottom;
   transform: scaleY(1);
 }
@@ -993,7 +1037,8 @@
   transform-origin: center bottom;
 }
 
-.pillars-from-bottom-top:hover::after {
+.pillars-from-bottom-top:hover::after,
+.pillars-from-bottom-top:active::after {
   transform-origin: center top;
   transform: scaleY(1);
 }
@@ -1008,7 +1053,8 @@
   position: relative;
 }
 
-.pillars-from-center:hover {
+.pillars-from-center:hover,
+.pillars-from-center:active {
   cursor:pointer;
 }
 
@@ -1033,7 +1079,10 @@
   right: -8px;
 }
 
-.pillars-from-center:hover::before, span:hover::after {
+.pillars-from-center:hover::before,
+.pillars-from-center:hover::after,
+.pillars-from-center:active::before,
+.pillars-from-center:active::after {
   transform: scaleY(1);
 }
 
@@ -1047,7 +1096,8 @@
   position: relative;
 }
 
-.strikethrough:hover {
+.strikethrough:hover,
+.strikethrough:active {
   cursor:pointer;
 }
 
@@ -1064,11 +1114,13 @@
   transition: transform 0.15s linear;
 }
 
-.strikethrough:hover {
+.strikethrough:hover,
+.strikethrough:active  {
   /*Change color property if desired. */
 }
 
-.strikethrough:hover::before {
+.strikethrough:hover::before,
+.strikethrough:active::before {
   transform-origin: center left;
   transform: scaleX(1) translateY(-50%);
 }
@@ -1089,7 +1141,8 @@
 }
 
 
-.underline-from-left:hover {
+.underline-from-left:hover,
+.underline-from-left:active {
   cursor:pointer;
 }
 
@@ -1107,7 +1160,8 @@
   transition: transform 0.15s linear;
 }
 
-.underline-from-left:hover::before {
+.underline-from-left:hover::before,
+.underline-from-left:active::before {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -1122,7 +1176,8 @@
   position: relative;
 }
 
-.underline-from-center:hover {
+.underline-from-center:hover,
+.underline-from-center:active {
   cursor:pointer;
 }
 
@@ -1139,7 +1194,8 @@
   transition: transform 0.15s linear;
 }
 
-.underline-from-center:hover::before {
+.underline-from-center:hover::before,
+.underline-from-center:active::before {
   transform: translate(-50%, 0) scaleX(1);
 }
 
@@ -1153,7 +1209,8 @@
   position: relative;
 }
 
-.reverse-underline:hover {
+.reverse-underline:hover,
+.reverse-underline:active {
   cursor:pointer;
 }
 
@@ -1170,7 +1227,8 @@
   transition: transform 0.25s linear;
 }
 
-.reverse-underline:hover::before {
+.reverse-underline:hover::before,
+.reverse-underline:active::before  {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
